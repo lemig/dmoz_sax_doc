@@ -24,7 +24,7 @@ TODO: Write usage instructions here
 
 This gem makes use of snippets of the DMOZ RDF content available from dmoz.org as test files. DMOZ open directory project is [licensed](http://www.dmoz.org/license.html) under [Creative Commons Attribution 3.0 Unported](http://creativecommons.org/licenses/by/3.0/).
 
- <p><table border="0" bgcolor="#336600" cellpadding="3" cellspacing="0">
+ <table border="0" bgcolor="#336600" cellpadding="3" cellspacing="0">
  <tr>
  <td>
  <table width="100%" cellpadding="2" cellspacing="0" border="0">
