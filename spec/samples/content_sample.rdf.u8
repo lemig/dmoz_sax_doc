@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns:r="http://www.w3.org/TR/RDF/" xmlns:d="http://purl.org/dc/elements/1.0/" xmlns="http://dmoz.org/rdf/">
+  <!-- Generated at 2013-01-27 00:03:25 EST from DMOZ 2.0 -->
+  <Topic r:id="">
+    <catid>1</catid>
+  </Topic>
+  <Topic r:id="Top/Arts">
+    <catid>381773</catid>
+  </Topic>
+  <Topic r:id="Top/Arts/Animation">
+    <catid>423945</catid>
+    <link1 r:resource="http://www.awn.com/"></link1>
+    <link r:resource="http://animation.about.com/"></link>
+    <link r:resource="http://www.toonhound.com/"></link>
+    <link r:resource="http://enculturation.gmu.edu/2_1/pisters.html"></link>
+    <link r:resource="http://www.digitalmediafx.com/Features/animationhistory.html"></link>
+    <link r:resource="http://www.spark-online.com/august00/media/romano.html"></link>
+    <link r:resource="http://www.animated-divots.net/"></link>
+  </Topic>
+  <ExternalPage about="http://www.awn.com/">
+    <d:Title>Animation World Network</d:Title>
+    <d:Description>Provides information resources to the international animation community. Features include searchable database archives, monthly magazine, web animation guide, the Animation Village, discussion forums and other useful resources.</d:Description>
+    <priority>1</priority>
+    <topic>Top/Arts/Animation</topic>
+  </ExternalPage>
+  <ExternalPage about="http://animation.about.com/">
+    <d:Title>About.com: Animation Guide</d:Title>
+    <d:Description>Keep up with developments in online animation for all skill levels. Download tools, and seek inspiration from online work.</d:Description>
+    <topic>Top/Arts/Animation</topic>
+  </ExternalPage>
+  <ExternalPage about="http://www.toonhound.com/">
+    <d:Title>Toonhound</d:Title>
+    <d:Description>British cartoon, animation and comic strip creations - links, reviews and news from the UK.</d:Description>
+    <topic>Top/Arts/Animation</topic>
+  </ExternalPage>
+  <ExternalPage about="http://enculturation.gmu.edu/2_1/pisters.html">
+    <d:Title>Enculturation: From Mouse to Mouse: Overcoming Information</d:Title>
+    <d:Description>Essay by Patricia Pisters on the animated image and its changing relationship with the cinematic image.</d:Description>
+    <topic>Top/Arts/Animation</topic>
+  </ExternalPage>
+</RDF>

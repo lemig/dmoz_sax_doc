@@ -22,9 +22,7 @@ TODO: Write usage instructions here
 
 ## License
 
-This gem makes use of snippets of the DMOZ RDF content available from dmoz.org as test files.
-
-DMOZ open directory project is licensed under the Creative Commons Attribution 3.0 Unported license ( http://creativecommons.org/licenses/by/3.0/ ).
+This gem makes use of snippets of the DMOZ RDF content available from dmoz.org as test files. DMOZ open directory project is [licensed](http://www.dmoz.org/license.html) under [Creative Commons Attribution 3.0 Unported](http://creativecommons.org/licenses/by/3.0/).
 
  <p><table border="0" bgcolor="#336600" cellpadding="3" cellspacing="0">
  <tr>
@@ -35,15 +33,14 @@ DMOZ open directory project is licensed under the Creative Commons Attribution 3
  </tr>
  <tr bgcolor="#CCCCCC" align="center">
  <td><font face="sans-serif, Arial, Helvetica" size="2">
- <a href="/cgi-bin/add.cgi?where=$cat">Submit a Site</a> -
+ <a href="/cgi-bin/add.cgi?where=Top">Submit a Site</a> -
  <a href="/about.html"><b>Open Directory Project</b></a> -
- <a href="/cgi-bin/apply.cgi?where=$cat">Become an Editor</a> </font>
+ <a href="/cgi-bin/apply.cgi?where=Top">Become an Editor</a> </font>
  </td></tr>
  </table>
  </td>
  </tr>
  </table>
-
 
 
 ## Contributing

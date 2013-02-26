@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns:r="http://www.w3.org/TR/RDF/" xmlns:d="http://purl.org/dc/elements/1.0/" xmlns="http://dmoz.org/rdf/">
+  <!-- 
+       
+       DMOZ Content is licensed under the Creative Commons 
+       Attribution 3.0 Unported (CC BY 3.0) 
+       ( http://creativecommons.org/licenses/by/3.0/ )
+
+
+  -->
+  <Topic r:id="Top/World">
+    <catid>2</catid>
+    <d:Title>Top</d:Title>
+    <lastUpdate>2010-08-16 06:05:15</lastUpdate>
+    <d:Description></d:Description>
+    <narrow r:resource="Top/Arts"></narrow>
+    <related r:resource="Kids_and_Teens"></related>
+  </Topic>
+  <Topic r:id="Top/Arts">
+    <catid>381773</catid>
+    <d:Title>Arts</d:Title>
+    <lastUpdate>2011-08-06 17:20:44</lastUpdate>
+    <d:Description>&lt;img src="/img/moz/mzcolor.gif" alt="Image from Mozilla museum: Mozilla as an Artist" width="128" height="120" align="right"&gt; &lt;p&gt;The ODP &lt;b&gt;Arts&lt;/b&gt; category contains English language sites about art, or "the use of skill and imagination in the creation of aesthetic objects, environments, or experiences that can be shared with others." This includes the "liberal arts," concerned with skill of expression in language, speech, and reasoning, and the "fine arts," concerned with affecting aesthetics directly, and especially affecting the sense of beauty. &lt;small&gt;(Quotes and paraphrases from &lt;a href="http://www.britannica.com/"&gt;Britannica.com&lt;/a&gt;)&lt;/small&gt; &lt;p&gt;Art is an abstract and subjective quality: It can be studied, but cannot be objectively measured, counted, weighed, or absolutely compared; it can only appeal to the viewers or audience's personal senses.</d:Description>
+    <narrow1 r:resource="Top/Arts/Directories"></narrow1>
+    <narrow1 r:resource="Top/Arts/News_and_Media"></narrow1>
+    <narrow1 r:resource="Top/Arts/Weblogs"></narrow1>
+    <narrow1 r:resource="Top/Arts/Chats_and_Forums"></narrow1>
+    <narrow2 r:resource="Top/Arts/Art_History"></narrow2>
+    <narrow2 r:resource="Top/Arts/Crafts"></narrow2>
+    <altlang r:resource="Tamil:Top/World/Tamil/கலை"></altlang>
+    <altlang r:resource="English:Top/World/O'zbekcha/San’at"></altlang>
+    <altlang r:resource="Euskara:Top/World/Euskara/Kultura"></altlang>
+    <altlang r:resource="Rumantsch:Top/World/Rumantsch/Art"></altlang>
+    <symbolic1 r:resource="Publishers:Top/Business/Publishing_and_Printing/Publishing/Books/Arts"></symbolic1>
+    <related r:resource="Top/Business/Arts_and_Entertainment"></related>
+    <symbolic2 r:resource="Native_and_Tribal:Top/Arts/Visual_Arts/Native_and_Tribal"></symbolic2>
+    <symbolic2 r:resource="Typography:Top/Arts/Graphic_Design/Typography"></symbolic2>
+    <related r:resource="Kids_and_Teens/Arts"></related>
+  </Topic>
+  <Alias r:id="Publishers:Top/Business/Publishing_and_Printing/Publishing/Books/Arts">
+    <d:Title>Publishers</d:Title>
+    <Target r:resource="Top/Business/Publishing_and_Printing/Publishing/Books/Arts"/>
+  </Alias>
+  <Alias r:id="Native_and_Tribal:Top/Arts/Visual_Arts/Native_and_Tribal">
+    <d:Title>Native_and_Tribal</d:Title>
+    <Target r:resource="Top/Arts/Visual_Arts/Native_and_Tribal"/>
+  </Alias>
+</RDF>

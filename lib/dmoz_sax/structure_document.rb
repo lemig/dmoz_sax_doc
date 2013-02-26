@@ -52,7 +52,6 @@ module DmozSax
       when 'lastUpdate'
         @time = @time_parser.time_from @buffer
       when 'Alias'
-        @alias.title = @title
         @on_alias.call(@alias) unless @on_alias.nil?
       when 'Topic'
         @topic.cid = @cid
