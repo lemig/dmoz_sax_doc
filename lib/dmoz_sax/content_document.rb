@@ -21,19 +21,17 @@ module DmozSax
     def start_element name, attributes = []
       @buffer = ""
       @name = name
-      @attributes = attributes
 
       case name 
       when 'Topic'
-        @path = DmozSax::Path.new attributes[0][1]
+        @topic = DmozSax::Topic.new attributes[0][1]
       when /^link/
-        if @on_link
-          @on_link.call(@name_parser.level_from(name), @id, @path, attributes[0][1]) 
-        end
+        @link = DmozSax::Link.new 
+        @on_link.call(@link) unless @on_link.nil? 
       when 'ExternalPage'
         @priority = 0
         @time = nil
-        @url = attributes[0][1]
+        DmozSax::ExternalPage.new attributes[0][1]
       end
     end
 
@@ -41,21 +39,24 @@ module DmozSax
     
       case name
       when 'catid'
-        @id = @buffer.to_i
+        @cid = @buffer.to_i
       when 'd:Description'
         @description = @buffer.strip
       when 'd:Title'
         @title = @buffer.strip.gsub('_', ' ')
       when 'topic'
-        @path = DmozSax::Path.new @buffer
+        @on_topic.call(@topic) unless @on_topic.nil?
       when 'mediadate'
         @time = @time_parser.time_from @buffer
       when 'priority'
         @priority = @buffer.to_i
       when 'ExternalPage'
-        if @on_external_page
-          @on_external_page.call(@url, @title, @description, @path, @priority, @time)
-        end
+        @external.priority = @priority
+        @external.title = @title
+        @external.description = @description
+        @external.path = @path
+        @external.time = @time
+        @on_external_page.call(@external) unless @on_external_page.nil?
       end
     end
   end

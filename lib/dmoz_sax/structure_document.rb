@@ -20,28 +20,23 @@ module DmozSax
 
     def start_element name, attributes = []
       @buffer = ""
-      @name = name
-      @attributes = attributes
 
       case name
       when 'Topic'
-        @path = Path.new attributes[0][1]
-        @enrichments = {
-            narrow: [],
-            symbolic: [],
-            related: [],
-            alt_lang: [] }
+        @cid, @description, @title = nil, nil, nil
+        @topic = DmozSax::Topic.new attributes[0][1]
       when 'Alias'
+        @alias = DmozSax::Alias.new attributes[0][1]
       when 'Target'
         @path = attributes[0][1]
       when 'altlang'
-        @enrichments[:alt_lang] << DmozSax::Path.new(attributes[0][1])
+        @topic.alt_langs << DmozSax::Path.new(attributes[0][1])
       when 'related'
-        @enrichments[:related] << DmozSax::Path.new(attributes[0][1])
+        @topic.related << DmozSax::Path.new(attributes[0][1])
       when /^narrow/
-        @enrichments[:narrow] << [DmozSax::Path.new(attributes[0][1]), @name_parser.level_from(name)]
+        @topic.narrows << DmozSax::Path.new(attributes[0][1], @name_parser.level_from(name))
       when /^symbolic/
-        @enrichments[:symbolic] << [DmozSax::Path.new(attributes[0][1]), @name_parser.level_from(name)]
+        @topic.symbolics << DmozSax::Path.new(attributes[0][1], @name_parser.level_from(name))
       end
     end
 
@@ -49,7 +44,7 @@ module DmozSax
 
       case name
       when 'catid'
-        @id = @buffer.to_i
+        @cid = @buffer.to_i
       when 'd:Description'
         @description = @buffer.strip
       when 'd:Title'
@@ -57,13 +52,14 @@ module DmozSax
       when 'lastUpdate'
         @time = @time_parser.time_from @buffer
       when 'Alias'
-        if @on_alias
-          @on_alias.call(@title, @path)
-        end
+        @alias.title = @title
+        @on_alias.call(@alias) unless @on_alias.nil?
       when 'Topic'
-        if @on_topic
-          @on_topic.call(@id, @path, @title, @description, @time, @enrichments)
-        end
+        @topic.cid = @cid
+        @topic.title = @title
+        @topic.description = @description
+        @topic.time = @time
+        @on_topic.call(@topic) unless @on_topic.nil?
       end
     end
   end
