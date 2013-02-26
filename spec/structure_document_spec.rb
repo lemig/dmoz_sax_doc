@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe DmozSax::StructureDocument do
-  it 'can parse a real structure.rdf.u8 document' do
-    #parser = Nokogiri::XML::SAX::Parser.new(DmozSax::StructureDocument.new)
-    #parser.parse(File.open('/opt/data/DMOZ/structure.rdf.u8'))
-    pending "included for full validation"
-  end
+  #it 'can parse a real structure.rdf.u8 document' do
+  #  parser = Nokogiri::XML::SAX::Parser.new(DmozSax::StructureDocument.new)
+  #  parser.parse(File.open('/opt/data/DMOZ/structure.rdf.u8'))
+  #end
 
   it 'can parse a sample structure.rdf.u8 document' do
 

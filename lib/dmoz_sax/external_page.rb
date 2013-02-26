@@ -1,9 +1,9 @@
 module DmozSax
   class ExternalPage
-    attr_accessor :url, :title, :description, :priority, :time
-    def initializer url
+    attr_accessor :url, :path, :title, :description, :priority, :time
+    def initialize url
       @url = url
-      @title, @description = nil, nil
+      @path, @title, @description = nil, nil, nil
       @priority = 0
       @time = nil
     end

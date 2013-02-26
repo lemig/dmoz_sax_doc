@@ -20,7 +20,7 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
-## License
+## Open Directory License
 
 This gem makes use of snippets of the DMOZ RDF content available from dmoz.org as test files. DMOZ open directory project is [licensed](http://www.dmoz.org/license.html) under [Creative Commons Attribution 3.0 Unported](http://creativecommons.org/licenses/by/3.0/).
 

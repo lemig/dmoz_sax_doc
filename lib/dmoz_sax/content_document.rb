@@ -3,7 +3,7 @@ require 'nokogiri'
 module DmozSax
   class ContentDocument < Nokogiri::XML::SAX::Document
 
-    attr_accessor :on_link, :on_external_page
+    attr_accessor :on_topic, :on_external_page
     attr_accessor :name_parser, :time_parser
 
     def initialize
@@ -26,12 +26,11 @@ module DmozSax
       when 'Topic'
         @topic = DmozSax::Topic.new attributes[0][1]
       when /^link/
-        @link = DmozSax::Link.new 
-        @on_link.call(@link) unless @on_link.nil? 
+        @topic.links << attributes[0][1]
       when 'ExternalPage'
         @priority = 0
         @time = nil
-        DmozSax::ExternalPage.new attributes[0][1]
+        @external = DmozSax::ExternalPage.new attributes[0][1]
       end
     end
 
@@ -44,8 +43,11 @@ module DmozSax
         @description = @buffer.strip
       when 'd:Title'
         @title = @buffer.strip.gsub('_', ' ')
-      when 'topic'
+      when 'Topic'
+        @topic.cid = @cid
         @on_topic.call(@topic) unless @on_topic.nil?
+      when 'topic'
+        @path = DmozSax::Path.new @buffer
       when 'mediadate'
         @time = @time_parser.time_from @buffer
       when 'priority'
