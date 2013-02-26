@@ -20,6 +20,32 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## License
+
+This gem makes use of snippets of the DMOZ RDF content available from dmoz.org as test files.
+
+DMOZ open directory project is licensed under the Creative Commons Attribution 3.0 Unported license ( http://creativecommons.org/licenses/by/3.0/ ).
+
+ <p><table border="0" bgcolor="#336600" cellpadding="3" cellspacing="0">
+ <tr>
+ <td>
+ <table width="100%" cellpadding="2" cellspacing="0" border="0">
+ <tr align="center">
+ <td><font face="sans-serif, Arial, Helvetica" size="2" color="#FFFFFF">Help build the largest human-edited directory on the web.</font></td>
+ </tr>
+ <tr bgcolor="#CCCCCC" align="center">
+ <td><font face="sans-serif, Arial, Helvetica" size="2">
+ <a href="/cgi-bin/add.cgi?where=$cat">Submit a Site</a> -
+ <a href="/about.html"><b>Open Directory Project</b></a> -
+ <a href="/cgi-bin/apply.cgi?where=$cat">Become an Editor</a> </font>
+ </td></tr>
+ </table>
+ </td>
+ </tr>
+ </table>
+
+
+
 ## Contributing
 
 1. Fork it
