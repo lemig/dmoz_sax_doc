@@ -24,8 +24,6 @@ TODO: Write usage instructions here
 
 This gem makes use of snippets of the DMOZ RDF content available from dmoz.org as test files. DMOZ open directory project is [licensed](http://www.dmoz.org/license.html) under [Creative Commons Attribution 3.0 Unported](http://creativecommons.org/licenses/by/3.0/).
 
- <table>
-   <tr><td>
    <table>
      <tr align="center">
      <td>Help build the largest human-edited directory on the web.</td>
@@ -37,8 +35,6 @@ This gem makes use of snippets of the DMOZ RDF content available from dmoz.org a
        <a href="/cgi-bin/apply.cgi?where=Top">Become an Editor</a>
      </td></tr>
    </table>
-   </td></tr>
- </table>
 
 
 ## Contributing
