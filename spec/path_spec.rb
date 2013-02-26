@@ -1,8 +1,22 @@
 require 'spec_helper'
 
 describe DmozSax::Path do
-  it "takes a / delimited string in it's initializer" do
+  it "takes a / delimited string in its initializer" do
     path = DmozSax::Path.new('This/Topic/Path')
+    path.to_a.should == ['This','Topic','Path']
+  end
+
+  it "removes the 'Top' category and English index categories (e.g. 'a' to 'z')" do
+
+    ('A'..'Z').each do |char|
+      path = DmozSax::Path.new("Top/This/Topic/#{ char }/Path")
+      path.to_a.should == ['This','Topic','Path']
+    end
+  end
+
+  it "may optionally be preceeded by a name or identifier" do
+    path = DmozSax::Path.new("Sample_Directory:Top/This/Topic/Path")
+    path.name.should == 'Sample Directory'
     path.to_a.should == ['This','Topic','Path']
   end
 

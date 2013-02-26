@@ -3,8 +3,12 @@ require 'delegate'
 module DmozSax
   class Path < DelegateClass(Array)
 
+    attr_reader :name
+
     def initialize str
-      @path = str.gsub('_', ' ').split('/').reject {|a| a =~ /^[A-Z]$/}
+      resource = str.gsub('_', ' ').split(':')
+      @name = resource.first if resource.length == 2
+      @path = resource.last.split('/').reject {|a| a =~ /^[A-Z]$/}
       @path.shift if 'Top' == @path.first
       super(@path.freeze)
     end

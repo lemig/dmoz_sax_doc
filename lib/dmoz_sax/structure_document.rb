@@ -35,13 +35,13 @@ module DmozSax
       when 'Target'
         @path = attributes[0][1]
       when 'altlang'
-        @enrichments[:alt_lang] << DmozSax::Resource.new(attributes[0][1])
+        @enrichments[:alt_lang] << DmozSax::Path.new(attributes[0][1])
       when 'related'
-        @enrichments[:related] << DmozSax::Resource.new(attributes[0][1])
+        @enrichments[:related] << DmozSax::Path.new(attributes[0][1])
       when /^narrow/
         @enrichments[:narrow] << [DmozSax::Path.new(attributes[0][1]), @name_parser.level_from(name)]
       when /^symbolic/
-        @enrichments[:symbolic] << [DmozSax::Resource.new(attributes[0][1]), @name_parser.level_from(name)]
+        @enrichments[:symbolic] << [DmozSax::Path.new(attributes[0][1]), @name_parser.level_from(name)]
       end
     end
 
