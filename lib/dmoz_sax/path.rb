@@ -27,5 +27,13 @@ module DmozSax
     def to_s
       @path.join('/')
     end
+
+    def parent_path
+      if @path.length == 0
+        nil
+      else
+        @path[0...-1].join('/')
+      end
+    end
   end
 end

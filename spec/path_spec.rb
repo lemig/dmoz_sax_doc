@@ -37,4 +37,24 @@ describe DmozSax::Path do
       expect { path[0] = 'Bob' }.to raise_error
     end
   end
+
+  context "getting parent path" do
+    it "returns parent path" do
+      path = DmozSax::Path.new 'This/Topic/Path'
+      path.parent_path.should == 'This/Topic'
+    end
+
+    it "has not parent path if top level path" do
+      path = DmozSax::Path.new ''
+      path.parent_path.should be_nil
+
+      path = DmozSax::Path.new 'Top'
+      path.parent_path.should be_nil
+    end
+
+    it "follows the same rules removing index categories" do
+      path = DmozSax::Path.new 'Top/Topic/A/Path'
+      path.parent_path.should == 'Topic'
+    end
+  end
 end

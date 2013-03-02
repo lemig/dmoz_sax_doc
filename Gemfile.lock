@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    dmoz_sax_doc (0.0.1)
+    dmoz_sax_doc (0.0.2)
       json (~> 1.7)
       nokogiri (~> 1.5)
 
