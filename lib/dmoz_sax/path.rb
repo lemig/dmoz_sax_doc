@@ -11,7 +11,7 @@ module DmozSax
       @name = resource.first if resource.length == 2
 
       unless resource.empty?
-        @path = resource.last.split('/').reject {|a| a =~ /^[A-Z]$/}
+        @path = resource.last.split('/').reject {|a| a =~ /^[A-Z0-9]$/}
         @path.shift if 'Top' == @path.first
       else 
         @path = []

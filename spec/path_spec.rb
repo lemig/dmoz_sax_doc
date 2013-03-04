@@ -8,7 +8,7 @@ describe DmozSax::Path do
 
   it "removes the 'Top' category and English index categories (e.g. 'a' to 'z')" do
 
-    ('A'..'Z').each do |char|
+    (('A'..'Z').to_a + (0..9).to_a).each do |char|
       path = DmozSax::Path.new("Top/This/Topic/#{ char }/Path")
       path.to_a.should == ['This','Topic','Path']
     end
