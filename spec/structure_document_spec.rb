@@ -20,12 +20,14 @@ describe DmozSax::StructureDocument do
     parser.parse(File.open('spec/samples/structure_sample.rdf.u8'))
     topics.count.should == 2
     topics[1].title.should == 'Arts'
-    topics[1].path.should == ['Arts']
+    topics[1].path.should == ['Top', 'Arts']
     topics[1].description.should include 'aesthetic objects'
     topics[1].cid.should == 381773
 
     aliases.count.should == 2
-    aliases[0].title.should == 'Publishers'
-    aliases[0].path.should == ['Business','Publishing and Printing','Publishing','Books','Arts']
+    aliases[0].path.name.should == 'Publishers'
+    aliases[0].path.should == ['Top','Business','Publishing and Printing','Publishing','Books','Arts']
+    aliases[0].path.to_s.should == '/Business/Publishing and Printing/Publishing/Books/Arts'
+    aliases[0].path.parent_to_s.should == '/Business/Publishing and Printing/Publishing/Books'
   end
 end

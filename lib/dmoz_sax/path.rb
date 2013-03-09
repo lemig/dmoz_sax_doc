@@ -9,30 +9,34 @@ module DmozSax
       resource = str.gsub('_', ' ').split(':')
 
       @name = resource.first if resource.length == 2
+      @level = level.to_i
 
       unless resource.empty?
-        @path = resource.last.split('/').reject {|a| a =~ /^[A-Z0-9]$/}
-        @path.shift if 'Top' == @path.first
-      else 
-        @path = []
+        super(resource.last.split('/'))
+      else
+        super([])
       end
-      @level = level.to_i
-      super(@path.freeze)
-    end
-
-    def to_a
-      @path.dup
     end
 
     def to_s
-      @path.join('/')
+      DmozSax::Path.path_str(DmozSax::Path.normalize(self))
     end
 
-    def parent_path
-      if @path.length == 0
-        nil
+    def parent_to_s
+      DmozSax::Path.path_str(DmozSax::Path.normalize(self[0...-1]))
+    end
+
+    def self.path_str arr
+      arr.empty? ? '/' : "/#{ arr.join('/') }"
+    end
+
+    def self.normalize arr
+      if arr.nil? or arr.length == 0
+        []
       else
-        @path[0...-1].join('/')
+        dup = arr.dup.reject {|a| a =~ /^[A-Z0-9]$/}
+        dup.shift if arr.first == 'Top'
+        dup
       end
     end
   end

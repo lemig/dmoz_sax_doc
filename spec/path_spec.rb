@@ -10,14 +10,14 @@ describe DmozSax::Path do
 
     (('A'..'Z').to_a + (0..9).to_a).each do |char|
       path = DmozSax::Path.new("Top/This/Topic/#{ char }/Path")
-      path.to_a.should == ['This','Topic','Path']
+      path.to_s.should == "/This/Topic/Path"
     end
   end
 
   it "may optionally be preceeded by a name or identifier" do
     path = DmozSax::Path.new("Sample_Directory:Top/This/Topic/Path")
     path.name.should == 'Sample Directory'
-    path.to_a.should == ['This','Topic','Path']
+    path.to_s.should == '/This/Topic/Path'
   end
 
   context "as an immutable array" do
@@ -41,20 +41,20 @@ describe DmozSax::Path do
   context "getting parent path" do
     it "returns parent path" do
       path = DmozSax::Path.new 'This/Topic/Path'
-      path.parent_path.should == 'This/Topic'
+      path.parent_to_s.should == '/This/Topic'
     end
 
     it "has not parent path if top level path" do
       path = DmozSax::Path.new ''
-      path.parent_path.should be_nil
+      path.parent_to_s.should == '/'
 
       path = DmozSax::Path.new 'Top'
-      path.parent_path.should be_nil
+      path.parent_to_s.should == '/'
     end
 
     it "follows the same rules removing index categories" do
       path = DmozSax::Path.new 'Top/Topic/A/Path'
-      path.parent_path.should == 'Topic'
+      path.parent_to_s.should == '/Topic'
     end
   end
 end
