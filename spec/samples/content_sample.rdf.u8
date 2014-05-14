@@ -38,4 +38,13 @@
     <d:Description>Essay by Patricia Pisters on the animated image and its changing relationship with the cinematic image.</d:Description>
     <topic>Top/Arts/Animation</topic>
   </ExternalPage>
+  <Topic r:id="Top/Arts/Animation/Cartoons/Titles/P/PB_&amp;_J_Otter">
+    <catid>425054</catid>
+    <link r:resource="http://www.tv.com/pbandj-otter/show/2596/summary.html"></link>
+  </Topic>
+  <ExternalPage about="http://www.tv.com/pbandj-otter/show/2596/summary.html">
+    <d:Title>PB &amp;J Otter</d:Title>
+    <d:Description>Includes a synopsis of the show, episode guide, viewer comments, and cast and crew credits.</d:Description>
+    <topic>Top/Arts/Animation/Cartoons/Titles/P/PB_&amp;_J_Otter</topic>
+  </ExternalPage>
 </RDF>

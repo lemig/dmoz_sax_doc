@@ -12,5 +12,8 @@ describe DmozSax::ContentDocument do
 
     parser = Nokogiri::XML::SAX::Parser.new(document)
     parser.parse(File.open('spec/samples/content_sample.rdf.u8'))
+
+    topics[3].path.should == ['Top', 'Arts', 'Animation', 'Cartoons', 'Titles', 'P','PB & J Otter']
+    pages[4].path.should  == ['Top', 'Arts', 'Animation', 'Cartoons', 'Titles', 'P','PB & J Otter']
   end
 end

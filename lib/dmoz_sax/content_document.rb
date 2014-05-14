@@ -22,9 +22,10 @@ module DmozSax
       @buffer = ""
       @name = name
 
-      case name 
+      case name
       when 'Topic'
-        @topic = DmozSax::Topic.new attributes[0][1]
+        unescaped = CGI.unescapeHTML(attributes[0][1])
+        @topic = DmozSax::Topic.new unescaped
       when /^link/
         @topic.links << attributes[0][1]
       when 'ExternalPage'
@@ -35,7 +36,7 @@ module DmozSax
     end
 
     def end_element name
-    
+
       case name
       when 'catid'
         @cid = @buffer.to_i
