@@ -47,4 +47,17 @@
     <d:Description>Includes a synopsis of the show, episode guide, viewer comments, and cast and crew credits.</d:Description>
     <topic>Top/Arts/Animation/Cartoons/Titles/P/PB_&amp;_J_Otter</topic>
   </ExternalPage>
+  <Topic r:id="Top/World/Armenian/Առողջություն">
+    <catid>32820</catid>
+    <link r:resource="http://www.shoonch.com/"></link>
+    <link r:resource="http://www.armaids.am/"></link>
+    <link r:resource="http://www.armdf.org/"></link>
+    <link r:resource="http://www.edent.am/"></link>
+    <link r:resource="http://www.gastro.am/"></link>
+  </Topic>
+  <ExternalPage about="http://www.shoonch.com/">
+    <d:Title>Շունչ Յոգայի Ստուդիա</d:Title>
+    <d:Description>Երևանյան կենտրոնն առաջարկում է յոգայի կանոնավոր և փիլատեսի դասեր, մերսման և դեմքի մշակման տարբեր տեսակի ծառայություններ։</d:Description>
+    <topic>Top/World/Armenian/Առողջություն</topic>
+  </ExternalPage>
 </RDF>

@@ -29,7 +29,7 @@ module DmozSax
         @alias = DmozSax::Alias.new attributes[0][1]
       when 'Target'
         @path = attributes[0][1]
-      when 'altlang'
+      when 'altlang', 'altlang1'
         @topic.alt_langs << DmozSax::Path.new(attributes[0][1])
       when 'related'
         @topic.related << DmozSax::Path.new(attributes[0][1])

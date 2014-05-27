@@ -27,6 +27,7 @@
     <narrow1 r:resource="Top/Arts/Chats_and_Forums"></narrow1>
     <narrow2 r:resource="Top/Arts/Art_History"></narrow2>
     <narrow2 r:resource="Top/Arts/Crafts"></narrow2>
+    <altlang1 r:resource="Ingles:Top/Arts"></altlang1>
     <altlang r:resource="Tamil:Top/World/Tamil/கலை"></altlang>
     <altlang r:resource="English:Top/World/O'zbekcha/San’at"></altlang>
     <altlang r:resource="Euskara:Top/World/Euskara/Kultura"></altlang>

@@ -15,5 +15,7 @@ describe DmozSax::ContentDocument do
 
     topics[3].path.should == ['Top', 'Arts', 'Animation', 'Cartoons', 'Titles', 'P','PB & J Otter']
     pages[4].path.should  == ['Top', 'Arts', 'Animation', 'Cartoons', 'Titles', 'P','PB & J Otter']
+    topics[4].path.should == ["Top", "World", "Armenian", "Առողջություն"]
+    pages[5].path.should  == ["Top", "World", "Armenian", "Առողջություն"]
   end
 end

@@ -29,5 +29,7 @@ describe DmozSax::StructureDocument do
     aliases[0].path.should == ['Top','Business','Publishing and Printing','Publishing','Books','Arts']
     aliases[0].path.to_s.should == '/Business/Publishing and Printing/Publishing/Books/Arts'
     aliases[0].path.parent_to_s.should == '/Business/Publishing and Printing/Publishing/Books'
+
+    topics[1].alt_langs.should include ["Top", "Arts"]
   end
 end
